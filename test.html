@@ -1,0 +1,25 @@
+---
+layout: default
+timeline:
+- hour: "09:00"
+  - fifteen_minutes_group: "2010-11-10 09:00:00 +0000"
+    - five_minutes: "2010-11-10 09:00:00 +0000"
+      session: "Registration"
+      amount: 10
+    - five_minutes: "2010-11-10 09:05:00 +0000"
+      amount: 0
+    - five_minutes: "2010-11-10 09:10:00 +0000"
+      amount: 12
+- hour: "10:00"
+  - fifteen_minutes group: "2010-11-10 09:15:00 +0000"
+    - five_minutes: "2010-11-10 09:15:00 +0000"
+      amount: 12
+    - five_minutes: "2010-11-10 09:20:00 +0000"
+      amount: 33
+---
+
+<ul>
+{% for t in page.timeline %}
+  <li> {{ t.hour }} </li>
+{% endfor %} 
+</ul>
